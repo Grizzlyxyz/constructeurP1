@@ -29,3 +29,12 @@ let mage3 = new Mage('Mufasa',101,910);class Archer extends Guerrier {
    this.fleche = fleche;
 }
 };
+
+// Pour utiliser les import - export il faut utiliser un serveur exemple : Live Server
+// Il faut modifier la balise script et y rajouter type="module"
+// Dans le fichier ou l'on veut exporter des "class" en fin de fichier rajouter : export {nomDeLaClass};
+// Dans le fichier ou l'on import au début du fichier il faut importer les class qui sont exporter des autres fichiers en faisant : import {nomDeLaClass,DeuxemeClass} from 'leChemin.js';// export defaultimport {Mage} from './partials/_mage.js';
+import SuperMage from './partials/_mage'; // je ne peux pas mettre les accolades car l'export est en default
+import {Guerrier} from './partials/_guerrier.js'let mage1 = new Mage("Nico");
+let warrior = new Guerrier('Nino',55);
+console.log(mage1);
